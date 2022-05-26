@@ -1,10 +1,18 @@
+@import "../variables&mixin/mixin";
 .section-sale-banner{
    padding: 0 10.9rem;
+   @include minAndMaxWidth(740px, 1024px){
+      padding: 0 2rem;
+   }
    .sale-banner-container {
       width: 100%;
       display: grid;
       grid-template-columns: 1.4fr 1fr;
       grid-template-rows: 549px;
+      @include minAndMaxWidth(740px, 1024px){
+         grid-template-columns: 1fr;
+         row-gap: 14rem;
+      }
    }
    
    .banner {
@@ -12,6 +20,15 @@
       padding: 8.3rem 4.6rem;
       img{
          position: absolute;
+         z-index: 0;
+         @include minAndMaxWidth(740px, 1024px){
+            
+         }
+      }
+      .heading-1, .btn{
+         z-index: 1;
+         position: relative;
+         text-shadow: 0 0 rgb(255,255,255);
       }
    }
 

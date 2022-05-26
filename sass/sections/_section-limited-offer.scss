@@ -1,14 +1,38 @@
+@import "../variables&mixin/mixin";
 .section-limited-offer{
    margin-top: 10rem;
    position: relative;
    height: 1205px;
+   @include minAndMaxWidth(740px, 1024px){
+      height: unset; 
+      margin-bottom: 16.2rem;      
+   }
    .limited-offer{
-      width: 1590px;
       grid-template-columns: 1.5fr 1fr;
       gap: 6.5rem;
+      img{
+         max-width: 1590px;
+      }
+      @include maxWidth(1580px){
+         grid-template-columns: 1fr 1fr;
+         img{
+            width: 100%;
+         }
+      }
+      @include minAndMaxWidth(740px, 1024px){
+            gap: 1rem;
+            align-items: center;
+      }
       &-content{
-         width: 475px;
+         max-width: 475px;
          padding-top: 3.4rem;
+         @include maxWidth(1580px){
+            width: 100%;
+         }
+         @include minAndMaxWidth(740px, 1024px){
+            padding-top: 0;
+
+         }
          .limited-label{
             font-size: 2.4rem;
             text-transform: uppercase;
@@ -16,6 +40,9 @@
             color: #fff;
             display: inline-block;
             padding: 1.2rem 2.4rem;
+            @include minAndMaxWidth(740px, 1024px){
+               
+            }
          }
          .limited-title{
             margin-top: 4rem;
@@ -24,6 +51,13 @@
             span{
                font-size: 5.2rem;
                color: $primaryColor;
+            }
+            @include minAndMaxWidth(740px, 1024px){
+               margin-top: 2rem;
+               font-size: 3.2rem;
+               span{
+                  font-size: 4.8rem;
+               }
             }
          }
          .expire-time{
@@ -36,6 +70,13 @@
                font-weight: 500;
                text-transform: uppercase;
             }
+            @include minAndMaxWidth(740px, 1024px){
+               margin-top: 1rem;
+               font-size: 4.8rem;
+               span{
+                  font-size: 1rem;
+               }
+            }
          }
       }
    }
@@ -47,6 +88,14 @@
       background-color: #fff;
       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
       padding: 6.2rem 5.1rem;
+      @include maxWidth(1580px){
+         position: relative;
+         bottom: unset;
+         right: unset;
+      }
+      @include minAndMaxWidth(740px, 1024px){
+            padding: 3.6rem 1.8rem;
+      }
       .pannel-nav{
          margin-right: 10rem;
       }
@@ -54,10 +103,12 @@
          display: flex;
          align-items: center;
          gap: 5rem;
+         @include minAndMaxWidth(740px, 1024px){
+            gap: 1rem;  
+         }
       }
       .slider-control{
          display: flex;
-         gap: 1.2rem;
          cursor: pointer;
          span{
             width: 9.4rem;
@@ -69,6 +120,16 @@
             font-size: 3.6rem;
             font-weight: 600;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            @include maxWidth(1200px){
+               width: 7.4rem;
+               height: 7.4rem;
+               font-size: 2.4rem;
+            }
+            @include minAndMaxWidth(740px, 1024px){
+               width: 5.2rem;
+               height: 5.2rem;
+               font-size: 2.4rem;
+            }
          }
       }
    }

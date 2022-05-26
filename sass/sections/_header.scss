@@ -1,3 +1,4 @@
+@import "../variables&mixin/mixin";
 .header {
    height: 104px;
    display: flex;
@@ -31,7 +32,7 @@
          font-family: 'IBM Plex Sans', sans-serif;
       }
    }
-   .main-nav:hover + .header-action + .mega-menu{
+   .main-nav:hover + .header-action + .mega-menu, .mega-menu:hover{
       visibility: visible;
       height: unset;
       opacity: 1;
@@ -52,6 +53,9 @@
       opacity: 0;
       pointer-events: none;
       transition: height 0.3s ease-in, opacity 0.2s ease;
+      @include minAndMaxWidth(740px, 1023px){
+         display: none;
+      }
       .mega-menu-box{
          padding: 3rem 3.5rem;
          .mega-menu-content{
@@ -108,16 +112,29 @@
          }
       }
    }
+   .mobile-menu-icon{
+      display: none;
+   }
+   @include minAndMaxWidth(740px,1024px){
+      .mobile-menu-icon{
+         display: block;
+         width: 3.2rem;
+      }
+   }
 }
 
 .main-nav {
    font-family: $secondaryFont;
+   height: 100%;
    position: relative;
+   @include minAndMaxWidth(740px, 1024px){
+      display: none;
+   }
    &-list{
       list-style-type: none;
+      height: 100%;
       display: flex;
       align-items: center;
-      height: 50%;
       gap: 45px;
    }
    &-link{

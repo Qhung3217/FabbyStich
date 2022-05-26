@@ -1,4 +1,4 @@
-
+@import "../variables&mixin/mixin";
 .section-policy{
    padding: 6.1rem 0;
    justify-content: center;
@@ -12,6 +12,12 @@
       color: $textColor;
       p{
          color: $subTextColor;
+      }
+   }
+   @include minAndMaxWidth(740px, 1024px){
+      .policy-gap-m{
+         column-gap: 1rem;
+         row-gap: 2rem;
       }
    }
 }

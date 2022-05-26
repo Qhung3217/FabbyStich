@@ -1,3 +1,4 @@
+@import "../variables&mixin/mixin";
 .section-hero{
    background-color: #edf0f5;
    padding-top: 4rem;
@@ -12,6 +13,9 @@
       z-index: 2;
       gap: 1.2rem;
       cursor: pointer;
+      @include maxWidth(1200px){
+         right: 6rem;
+      }
       span{
          width: 9.4rem;
          height: 9.4rem;
@@ -22,6 +26,11 @@
          font-size: 3.6rem;
          font-weight: 600;
          box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+         @include maxWidth(1580px){
+            width: 5.2rem;
+            height: 5.2rem;
+            font-size: 2.4rem;
+         }
       }
    }
    .social-logo{
@@ -34,6 +43,9 @@
       right: 10rem;
       top: 50%;
       transform: translateY(-50%);
+      @include maxWidth(1200px){
+         right: 5rem;
+      }
    }
    .ecllipse {
       background: rgb(0,255,255);
@@ -51,10 +63,20 @@
 .hero{  
    display: grid;
    grid-template-columns: 1fr 1.2fr;
-   
+   @include minAndMaxWidth(740px, 1024px){
+      grid-template-columns: 1fr;
+   }
    &-text-box{
       margin-top: 13.5rem;
       position: relative;
+      @include maxWidth(1200px){
+         margin-top: 0.5rem;
+      }
+      @include minAndMaxWidth(740px, 1024px){
+         z-index: 3;
+         position: absolute;
+         
+      }
       .slider-number{
          position:absolute;
          font-size: 1.6rem;
@@ -65,6 +87,12 @@
          display: flex;
          align-items: flex-start;
          font-family: $secondaryFont;
+         @include minAndMaxWidth(740px, 1024px){
+            bottom: -45%;
+            span{
+               font-weight: 500;
+            }
+         }
          span{
             font-size: 3rem;
             color: $textColor;
@@ -79,11 +107,20 @@
       font-size: 7.2rem;
       font-weight: 500;
       margin-bottom: 6px;
+      @include minAndMaxWidth(740px, 1024px){
+         text-shadow: 0 0 #fff;
+         width: 50%;
+      }
    }
    &-description{
       color: $subTextColor;
       font-size: 2.4rem;
       margin-bottom: 7.5rem;
+      @include minAndMaxWidth(740px, 1024px){
+         // text-shadow: 0 0 #fff;
+         width: 50%;
+         font-weight: 500;
+      }
    }
    &-img-box{
       position: relative;
@@ -92,6 +129,9 @@
          display: block;
          position: relative;
          width: 100%;
+         @include minAndMaxWidth(740px, 1024px){
+           
+         }
       }
       .circle{
          position: absolute;

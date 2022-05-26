@@ -1,4 +1,5 @@
 @import "./variables&mixin/variables";
+@import "./variables&mixin/mixin";
 *{
    margin: 0;
    padding: 0;
@@ -11,7 +12,7 @@ html {
 }
 
 .container {
-   width: 1200px;
+   max-width: 1200px;
    margin: 0 auto;
 }
 .heading-1{
@@ -72,7 +73,17 @@ html {
    color: $textColor;
    background: transparent;
    border: 1px solid #000;
+   @include maxWidth(1200px){
+      box-shadow: 0 5px 20px rgba(0,0,0,0.01);
+   }
+}
 
+@include maxWidth(1200px){
+   .btn-m--white{
+      color: #000;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid #000;
+   }
 }
 
 .grid{
@@ -98,7 +109,40 @@ html {
 .grid-5-col{
    grid-template-columns: repeat(5,1fr);
 }
-
+@include maxWidth(1200px){
+   .container {
+      max-width: 984px;
+   }
+   .grid-l-1-col{
+      grid-template-columns: repeat(1,1fr);
+   }
+   .grid-l-2-col{
+      grid-template-columns: repeat(2,1fr);
+   }
+   .grid-l-3-col{
+      grid-template-columns: repeat(3,1fr);
+   }
+   .grid-l-4-col{
+      grid-template-columns: repeat(4,1fr);
+   }
+}
+@include minAndMaxWidth(740px, 1023px){
+   .container{
+      max-width:644px;
+   }
+   .grid-m-1-col{
+      grid-template-columns: repeat(1,1fr);
+   }
+   .grid-m-2-col{
+      grid-template-columns: repeat(2,1fr);
+   }
+   .grid-m-3-col{
+      grid-template-columns: repeat(3,1fr);
+   }
+   .grid-m-4-col{
+      grid-template-columns: repeat(4,1fr);
+   }
+}
 .list{
    list-style: none;
    .item{
@@ -161,7 +205,9 @@ html {
 .products{
       column-gap: 2.9rem;
       row-gap: 4rem;
-
+   @include maxWidth(1200px){
+      column-gap: 2rem;
+   }
    .product {
       text-align: center;
       position: relative;
@@ -240,6 +286,9 @@ html {
          overflow: hidden;
          &:hover .product-hover-box{
             bottom: 4rem;
+            @include maxWidth(1200px){
+               bottom: 2rem;
+            }
          }
       }
       &-hover-box{
@@ -249,17 +298,28 @@ html {
          position: absolute;
          bottom: -3rem;
          transition: all 0.2s ease;
+         @include maxWidth(1200px){
+            padding: 0.8rem;
+            bottom: -5rem;
+         }
          .box-wrap{
             display: grid;
             grid-template-columns: 1fr 0.2fr;
             gap: 1rem;
             width: 100%;
             height: 100%;
+            @include maxWidth(1200px){
+               gap: 0.8rem;
+            }
             a{
                font-size: 1.6rem;
                font-weight: 500;
                display: block;
                text-align: center;
+               @include maxWidth(1200px){
+                  font-size: 1.4rem;
+                  padding: 0.8rem 1.6rem;
+               }
             }
             .product-detail{
                width: 5.2rem;
@@ -284,3 +344,5 @@ html {
 .none-box-shadow{
    box-shadow: unset;
 }
+
+
