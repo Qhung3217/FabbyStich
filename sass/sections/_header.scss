@@ -3,6 +3,7 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
+   position: relative;
    &-logo{
       height: 32px;
       flex: 0;
@@ -30,13 +31,93 @@
          font-family: 'IBM Plex Sans', sans-serif;
       }
    }
+   .main-nav:hover + .header-action + .mega-menu{
+      visibility: visible;
+      height: unset;
+      opacity: 1;
+      pointer-events: unset;
+      z-index: 4;
+   }
+   .mega-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      background-color: #fff;
+      font-family: $secondaryFont;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      visibility: hidden;
+      height: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: height 0.3s ease-in, opacity 0.2s ease;
+      .mega-menu-box{
+         padding: 3rem 3.5rem;
+         .mega-menu-content{
+            .mega-menu-col {
+               .mega-menu-list-title{
+                  text-transform: uppercase;
+                  color: #4b4b4b;
+                  font-weight: 700;
+                  font-size: 1.6rem;
+                  margin-bottom: 1.8rem;
+               }
+               .mega-menu-list{
+                  list-style: none;
+                  .mega-menu-item{
+                     margin-bottom: 1.6rem;
+                     a{
+                        font-size: 1.6rem;
+                        color: #464646;
+                        text-decoration: none;
+                        transition: all 0.3 ease;
+                        span{
+                           display: none;
+                        }
+                        &:hover span{
+                           display: inline;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+
+         .mega-menu-banner-box{
+            margin-top: 3rem;
+            gap: 3.5rem;
+            .mega-menu-banner{
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               background-color: #f6f6f6;
+               .content-inner{
+                  padding: 2.8rem 0 2.8rem 3.5rem;
+                  .mega-menu-banner-title{
+                     font-size: 4rem;
+                     font-weight: 600;
+                     margin-bottom: 2.4rem;
+                  }
+                  a{
+                     margin-bottom: 0.3rem;
+                  }
+               }
+            }
+
+         }
+      }
+   }
 }
 
 .main-nav {
-   font-family: 'Gothic A1', sans-serif;
+   font-family: $secondaryFont;
+   position: relative;
    &-list{
       list-style-type: none;
       display: flex;
+      align-items: center;
+      height: 50%;
       gap: 45px;
    }
    &-link{
@@ -44,5 +125,5 @@
       color: #232323;
       font-size: 1.6rem;
    }
-
+   
 }

@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .header-logo {
   height: 32px;
@@ -31,13 +32,87 @@
   right: -80%;
   font-family: "IBM Plex Sans", sans-serif;
 }
+.header .main-nav:hover + .header-action + .mega-menu {
+  visibility: visible;
+  height: unset;
+  opacity: 1;
+  pointer-events: unset;
+  z-index: 4;
+}
+.header .mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #fff;
+  font-family: "Gothic A1", sans-serif;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: height 0.3s ease-in, opacity 0.2s ease;
+}
+.header .mega-menu .mega-menu-box {
+  padding: 3rem 3.5rem;
+}
+.header .mega-menu .mega-menu-box .mega-menu-content .mega-menu-col .mega-menu-list-title {
+  text-transform: uppercase;
+  color: #4b4b4b;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+}
+.header .mega-menu .mega-menu-box .mega-menu-content .mega-menu-col .mega-menu-list {
+  list-style: none;
+}
+.header .mega-menu .mega-menu-box .mega-menu-content .mega-menu-col .mega-menu-list .mega-menu-item {
+  margin-bottom: 1.6rem;
+}
+.header .mega-menu .mega-menu-box .mega-menu-content .mega-menu-col .mega-menu-list .mega-menu-item a {
+  font-size: 1.6rem;
+  color: #464646;
+  text-decoration: none;
+  transition: all 0.3 ease;
+}
+.header .mega-menu .mega-menu-box .mega-menu-content .mega-menu-col .mega-menu-list .mega-menu-item a span {
+  display: none;
+}
+.header .mega-menu .mega-menu-box .mega-menu-content .mega-menu-col .mega-menu-list .mega-menu-item a:hover span {
+  display: inline;
+}
+.header .mega-menu .mega-menu-box .mega-menu-banner-box {
+  margin-top: 3rem;
+  gap: 3.5rem;
+}
+.header .mega-menu .mega-menu-box .mega-menu-banner-box .mega-menu-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+}
+.header .mega-menu .mega-menu-box .mega-menu-banner-box .mega-menu-banner .content-inner {
+  padding: 2.8rem 0 2.8rem 3.5rem;
+}
+.header .mega-menu .mega-menu-box .mega-menu-banner-box .mega-menu-banner .content-inner .mega-menu-banner-title {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+}
+.header .mega-menu .mega-menu-box .mega-menu-banner-box .mega-menu-banner .content-inner a {
+  margin-bottom: 0.3rem;
+}
 
 .main-nav {
   font-family: "Gothic A1", sans-serif;
+  position: relative;
 }
 .main-nav-list {
   list-style-type: none;
   display: flex;
+  align-items: center;
+  height: 50%;
   gap: 45px;
 }
 .main-nav-link {
