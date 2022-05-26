@@ -1,0 +1,65 @@
+.footer{
+   background-color: #edf0f5;
+   margin-top: 12.9rem;
+   position: relative;
+   overflow: hidden;
+   &:before,&:after {
+      position: absolute;
+   }
+   &:before{
+      content: "";
+      position: absolute;
+      background: rgb(255,29,121);
+      background: linear-gradient(225deg, rgba(255,29,121,1) 0%, rgba(255,206,0,1) 67%);
+      width: 364px;
+      height: 364px;
+      border-radius: 50%;
+      opacity: 0.2;
+      top: 8rem;
+      left: -12rem;
+
+   }
+   &:after{
+      content: "";
+      background: rgb(0,255,255);
+      background: linear-gradient(40deg, rgba(0,255,255,1) 0%, rgba(255,206,0,1) 50%);
+      position: absolute;
+      width: 117px;
+      height: 117px;
+      border-radius: 50%;
+      opacity: 0.2;
+      top: 3.9rem;
+      right: 0;
+   }
+   .footer-container{
+      grid-template-columns: 1.2fr repeat(3,1fr);
+      justify-items: center;
+      padding: 8rem 0 10rem;
+      color: #4b4b4b;
+      font-size: 1.6rem;
+      .title{
+            font-weight: 400;
+            margin-bottom: 2.2rem;
+      }
+      .intro{
+         .desc{
+            margin-top: 2.6rem;
+            font-family: $secondaryFont;
+         }
+         .social{
+            display: flex;
+            align-items: center;
+            gap: 3.5rem;
+            margin-top: 2.4rem;
+         }
+         
+      }
+      .information-company{
+         
+      }
+      .Account{
+   
+      }
+   }
+
+}

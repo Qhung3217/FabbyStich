@@ -1,0 +1,286 @@
+@import "./variables&mixin/variables";
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-family: $primaryFont;
+   font-size: 62.5%;
+}
+
+.container {
+   width: 1200px;
+   margin: 0 auto;
+}
+.heading-1{
+   font-weight: 500;
+   font-size: 5.6rem;
+}
+.heading-2{
+   font-weight: 500;
+   font-size: 4.8rem;
+}
+.heading-3{
+   font-weight: 500;
+   font-size: 3.2rem;
+}
+.heading-4{
+   font-size: 2.4rem;
+   font-weight: 500;
+}
+.secondary-body-text{
+   font-style: 1.6rem;
+}
+.secondary-body-text-bold{
+   font-size: 1.6rem;
+   font-weight: 500;
+}
+.heading-3-section{
+   color: #464646;
+   text-align: center;
+   margin-bottom: 1.9rem;
+   font-family: $primaryFont;
+}
+.subtitle-section{
+   color: $subTextColor;
+      margin-bottom: 4.1rem;
+      text-align: center;
+      display: block;
+      font-size: 1.8rem;
+}
+.btn {
+   text-decoration: none;
+   background: none;
+   display: inline-block;
+   text-transform: uppercase;
+   padding: 1.6rem 3.2rem;
+   font-size: 1.6rem;
+   border-radius: 3px;
+   border: none;
+   cursor: pointer;
+}
+
+.btn--primary{
+   color: #fff;
+   box-shadow: 0 5px 10px #f9b5b0;
+   background-color: $primaryColor;
+}
+
+.btn--secondary{
+   color: $textColor;
+   background: transparent;
+   border: 1px solid #000;
+
+}
+
+.grid{
+   display: grid;
+}
+
+.grid--h-center{
+   justify-items: center;
+}
+
+.grid-2-col{
+   grid-template-columns: repeat(2,1fr);
+}
+
+.grid-3-col{
+   grid-template-columns: repeat(3,1fr);
+}
+
+.grid-4-col{
+   grid-template-columns: repeat(4,1fr);
+}
+
+.grid-5-col{
+   grid-template-columns: repeat(5,1fr);
+}
+
+.list{
+   list-style: none;
+   .item{
+      line-height: 1.7;
+      a{
+         text-decoration: none;
+         color: currentColor;
+      }
+   }
+}
+/******************************/
+/******SUB NAV ******/
+/******************************/
+.sub-nav {
+   margin-bottom: 4.1rem;
+   .sub-nav-list{
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      gap: 2.5rem;
+   }
+   .sub-nav-list--center{
+      justify-content: center;
+   }
+   .sub-nav-list--right{
+      justify-content: flex-end;
+   }
+   .sub-nav-item{
+      font-size: 2.4rem;
+      font-family: $primaryFont;
+      color: #4b4b4b;
+      font-weight: 400;
+      cursor: pointer;
+      &.choosen{
+         color: $primaryColor;
+         position: relative;
+         
+         &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 20%;
+            bottom: 0px;
+            height: 1px;
+            display: block;
+            background-color: $primaryColor;
+         }
+      }
+   }
+}
+
+
+
+
+/******************************/
+/******PRODUCT******/
+/******************************/
+@import "./variables&mixin/mixin";
+
+.products{
+      column-gap: 2.9rem;
+      row-gap: 4rem;
+
+   .product {
+      text-align: center;
+      position: relative;
+      img{
+         width: 100%;
+      }
+      
+      &-category{
+         margin-top: 1.1rem;
+         font-size: 1.4rem;
+         color: $subTextColor;
+         margin-bottom: 0.7rem;
+      }
+
+      &-rating{
+         margin-bottom: 1.2rem;
+         img{
+            width: unset;
+         }
+      }
+
+      &-title{
+         font-size: 1.6rem;
+         color: #4b4b4b;
+         font-weight: 500;
+         margin-bottom: 1.5rem;
+      }
+      &-price-box{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 1.5rem;
+      }
+      &-price{
+         color: $primaryColor;
+         font-size: 2rem;
+         font-weight: 700;
+         &-slash{
+            color: #9da2a5;
+            position: relative;
+            &:before{
+               content: "";
+               position: absolute;
+               left: 0;
+               right: 0;
+               height: 1px;
+               background-color: currentColor;
+               @include alignObject("top");
+            }
+         }
+      }
+      &-tag{
+         width: 5.1rem;
+         height: 5.1rem;
+         border-radius: 50%;
+         font-size: 1.6rem;
+         font-weight: 700;
+         position: absolute;
+         top: 1rem;
+         left: 1rem;
+         text-align: center;
+         line-height: 5.1rem;
+      }
+      &-tag--sale{
+         color: #fff;
+         background-color: $shadeColor;
+         
+      }
+      &-tag--new{
+         text-transform: uppercase;
+         color: #fff;
+         background-color: #232323;
+      }
+      &-img-box{
+         position: relative;
+         overflow: hidden;
+         &:hover .product-hover-box{
+            bottom: 4rem;
+         }
+      }
+      &-hover-box{
+         padding: 1.2rem;
+         height: 3.9rem;
+         width: 100%;
+         position: absolute;
+         bottom: -3rem;
+         transition: all 0.2s ease;
+         .box-wrap{
+            display: grid;
+            grid-template-columns: 1fr 0.2fr;
+            gap: 1rem;
+            width: 100%;
+            height: 100%;
+            a{
+               font-size: 1.6rem;
+               font-weight: 500;
+               display: block;
+               text-align: center;
+            }
+            .product-detail{
+               width: 5.2rem;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
+            .product-icon{
+               width: 1.6rem;
+               height: 1.1rem;
+               display: block;
+            }
+         }
+      }
+   }
+
+}
+/******************************/
+/******HELPER CLASSES******/
+/******************************/
+
+.none-box-shadow{
+   box-shadow: unset;
+}

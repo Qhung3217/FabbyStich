@@ -1,0 +1,484 @@
+.header {
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo {
+  height: 32px;
+  flex: 0;
+}
+.header-action {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+.header-action-container {
+  position: relative;
+}
+.header-action-icon-number {
+  position: absolute;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #F04639;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  text-align: center;
+  line-height: 2rem;
+  top: -50%;
+  right: -80%;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.main-nav {
+  font-family: "Gothic A1", sans-serif;
+}
+.main-nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 45px;
+}
+.main-nav-link {
+  text-decoration: none;
+  color: #232323;
+  font-size: 1.6rem;
+}
+
+.section-hero {
+  background-color: #edf0f5;
+  padding-top: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.section-hero .slider-control {
+  position: absolute;
+  bottom: 6.5rem;
+  right: 14rem;
+  display: flex;
+  z-index: 2;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+.section-hero .slider-control span {
+  width: 9.4rem;
+  height: 9.4rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-weight: 600;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.section-hero .social-logo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.2rem;
+  right: 10rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.section-hero .ecllipse {
+  background: rgb(0, 255, 255);
+  background: linear-gradient(40deg, rgb(0, 255, 255) 0%, rgb(255, 206, 0) 50%);
+  position: absolute;
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  opacity: 0.2;
+  top: 20px;
+  right: -57px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+.hero-text-box {
+  margin-top: 13.5rem;
+  position: relative;
+}
+.hero-text-box .slider-number {
+  position: absolute;
+  font-size: 1.6rem;
+  color: #bebebe;
+  font-weight: 500;
+  left: 0;
+  bottom: 22px;
+  display: flex;
+  align-items: flex-start;
+  font-family: "Gothic A1", sans-serif;
+}
+.hero-text-box .slider-number span {
+  font-size: 3rem;
+  color: #232323;
+  margin-left: 4px;
+  margin-right: 4px;
+  font-weight: 400;
+}
+.hero-text-primary {
+  color: #232323;
+  font-size: 7.2rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.hero-description {
+  color: #707070;
+  font-size: 2.4rem;
+  margin-bottom: 7.5rem;
+}
+.hero-img-box {
+  position: relative;
+}
+.hero-img-box .hero-img {
+  z-index: 2;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.hero-img-box .circle {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-img-box .ecllipse-img {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+}
+.hero-img-box .ecllipse-1 {
+  top: 30%;
+  left: 46%;
+}
+.hero-img-box .ecllipse-2 {
+  left: 31%;
+  top: 59%;
+}
+.hero-img-box .ecllipse-3 {
+  left: 75%;
+  top: 59%;
+}
+
+.section-policy {
+  padding: 6.1rem 0;
+  justify-content: center;
+}
+.section-policy .policy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.section-policy .policy-content {
+  color: #232323;
+}
+.section-policy .policy-content p {
+  color: #707070;
+}
+
+.section-sale-banner {
+  padding: 0 10.9rem;
+}
+.section-sale-banner .sale-banner-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 549px;
+}
+.section-sale-banner .banner {
+  position: relative;
+  padding: 8.3rem 4.6rem;
+}
+.section-sale-banner .banner img {
+  position: absolute;
+}
+.section-sale-banner .banner--left {
+  background-color: #fff1ba;
+}
+.section-sale-banner .banner--left img {
+  right: 4.6rem;
+  bottom: 0;
+  width: 553px;
+}
+.section-sale-banner .banner--left a {
+  margin-top: 5.9rem;
+}
+.section-sale-banner .banner--right {
+  background-color: #f1f2f3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.section-sale-banner .banner--right img {
+  bottom: 0;
+  right: 4.6rem;
+}
+.section-sale-banner .banner--right .banner-right-content h1 {
+  margin-bottom: 5.7rem;
+}
+
+.section-product-in-store {
+  font-family: "Gothic A1", sans-serif;
+  margin-top: 8.6rem;
+}
+
+.section-trending-banner {
+  width: 100%;
+  margin-top: 10rem;
+}
+.section-trending-banner .banner-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 513px;
+  gap: 3.9rem;
+}
+.section-trending-banner .banner-wrap .banner-title {
+  font-size: 6.4rem;
+  font-weight: 500;
+}
+.section-trending-banner .banner-wrap .trending-banner-left {
+  position: relative;
+  background-color: #fdeae6;
+  padding-left: 6.8rem;
+  padding-top: 8.3rem;
+}
+.section-trending-banner .banner-wrap .trending-banner-left img {
+  position: absolute;
+  bottom: 0;
+  right: 1.8rem;
+}
+.section-trending-banner .banner-wrap .trending-banner-left .banner-title {
+  margin-bottom: 3.5rem;
+}
+.section-trending-banner .banner-wrap .trending-banner-left .banner-title {
+  display: block;
+  width: 70%;
+}
+.section-trending-banner .banner-wrap .trending-banner-right {
+  background-image: url("../../assets/TrendingBanner/banner_right.png");
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.section-trending-banner .banner-wrap .trending-banner-right .banner-box {
+  margin-left: 6.8rem;
+  margin-top: 6.7rem;
+}
+.section-trending-banner .banner-wrap .trending-banner-right .banner-box .banner-title {
+  margin-bottom: 3.5rem;
+}
+
+.section-best-selling-product {
+  margin-top: 10.4rem;
+}
+
+.section-limited-offer {
+  margin-top: 10rem;
+  position: relative;
+  height: 1205px;
+}
+.section-limited-offer .limited-offer {
+  width: 1590px;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 6.5rem;
+}
+.section-limited-offer .limited-offer-content {
+  width: 475px;
+  padding-top: 3.4rem;
+}
+.section-limited-offer .limited-offer-content .limited-label {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  background-color: #F04639;
+  color: #fff;
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+}
+.section-limited-offer .limited-offer-content .limited-title {
+  margin-top: 4rem;
+  font-weight: 400;
+  color: #464646;
+}
+.section-limited-offer .limited-offer-content .limited-title span {
+  font-size: 5.2rem;
+  color: #F04639;
+}
+.section-limited-offer .limited-offer-content .expire-time {
+  font-size: 5.6rem;
+  margin-top: 3rem;
+  font-family: "Gothic A1", sans-serif;
+}
+.section-limited-offer .limited-offer-content .expire-time span {
+  font-size: 2rem;
+  color: #F04639;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.section-limited-offer .pannel-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 6.2rem 5.1rem;
+}
+.section-limited-offer .pannel-right .pannel-nav {
+  margin-right: 10rem;
+}
+.section-limited-offer .pannel-right .pannel-right-content {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.section-limited-offer .pannel-right .slider-control {
+  display: flex;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+.section-limited-offer .pannel-right .slider-control span {
+  width: 9.4rem;
+  height: 9.4rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-weight: 600;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-newsletter {
+  margin-top: 16.2rem;
+  position: relative;
+}
+.section-newsletter img {
+  width: 100%;
+}
+.section-newsletter .newsletter-box {
+  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  width: 1125px;
+  height: 428px;
+  padding: 7.3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section-newsletter .newsletter-box .newsletter-title {
+  text-align: center;
+  color: #464646;
+  font-weight: 500;
+}
+.section-newsletter .newsletter-box .newsletter-subtitle {
+  font-size: 2.4rem;
+  color: #707070;
+  margin-bottom: 5.6rem;
+  font-family: "Gothic A1", sans-serif;
+}
+.section-newsletter .newsletter-box .newsletter-form-group {
+  position: relative;
+  height: 6rem;
+  width: 52.9rem;
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.section-newsletter .newsletter-box .newsletter-form-group .newsletter-form-input {
+  color: #bebebe;
+  font-size: 1.6rem;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 2.2rem 2rem;
+}
+.section-newsletter .newsletter-box .newsletter-form-group .newsletter-form-submit {
+  flex-shrink: 0;
+  width: 11.7rem;
+  height: 5.1rem;
+}
+
+.section-instagram {
+  margin-top: 31rem;
+  padding: 0 2.3rem;
+}
+.section-instagram .images {
+  gap: 2.3rem;
+}
+.section-instagram .images .image {
+  width: 100%;
+}
+
+.footer {
+  background-color: #edf0f5;
+  margin-top: 12.9rem;
+  position: relative;
+  overflow: hidden;
+}
+.footer:before, .footer:after {
+  position: absolute;
+}
+.footer:before {
+  content: "";
+  position: absolute;
+  background: rgb(255, 29, 121);
+  background: linear-gradient(225deg, rgb(255, 29, 121) 0%, rgb(255, 206, 0) 67%);
+  width: 364px;
+  height: 364px;
+  border-radius: 50%;
+  opacity: 0.2;
+  top: 8rem;
+  left: -12rem;
+}
+.footer:after {
+  content: "";
+  background: rgb(0, 255, 255);
+  background: linear-gradient(40deg, rgb(0, 255, 255) 0%, rgb(255, 206, 0) 50%);
+  position: absolute;
+  width: 117px;
+  height: 117px;
+  border-radius: 50%;
+  opacity: 0.2;
+  top: 3.9rem;
+  right: 0;
+}
+.footer .footer-container {
+  grid-template-columns: 1.2fr repeat(3, 1fr);
+  justify-items: center;
+  padding: 8rem 0 10rem;
+  color: #4b4b4b;
+  font-size: 1.6rem;
+}
+.footer .footer-container .title {
+  font-weight: 400;
+  margin-bottom: 2.2rem;
+}
+.footer .footer-container .intro .desc {
+  margin-top: 2.6rem;
+  font-family: "Gothic A1", sans-serif;
+}
+.footer .footer-container .intro .social {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  margin-top: 2.4rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

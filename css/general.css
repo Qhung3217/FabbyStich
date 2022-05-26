@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 62.5%;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.heading-1 {
+  font-weight: 500;
+  font-size: 5.6rem;
+}
+
+.heading-2 {
+  font-weight: 500;
+  font-size: 4.8rem;
+}
+
+.heading-3 {
+  font-weight: 500;
+  font-size: 3.2rem;
+}
+
+.heading-4 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.secondary-body-text {
+  font-style: 1.6rem;
+}
+
+.secondary-body-text-bold {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.heading-3-section {
+  color: #464646;
+  text-align: center;
+  margin-bottom: 1.9rem;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.subtitle-section {
+  color: #707070;
+  margin-bottom: 4.1rem;
+  text-align: center;
+  display: block;
+  font-size: 1.8rem;
+}
+
+.btn {
+  text-decoration: none;
+  background: none;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 1.6rem 3.2rem;
+  font-size: 1.6rem;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  color: #fff;
+  box-shadow: 0 5px 10px #f9b5b0;
+  background-color: #F04639;
+}
+
+.btn--secondary {
+  color: #232323;
+  background: transparent;
+  border: 1px solid #000;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--h-center {
+  justify-items: center;
+}
+
+.grid-2-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4-col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5-col {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.list {
+  list-style: none;
+}
+.list .item {
+  line-height: 1.7;
+}
+.list .item a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/******************************/
+/******SUB NAV ******/
+/******************************/
+.sub-nav {
+  margin-bottom: 4.1rem;
+}
+.sub-nav .sub-nav-list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 2.5rem;
+}
+.sub-nav .sub-nav-list--center {
+  justify-content: center;
+}
+.sub-nav .sub-nav-list--right {
+  justify-content: flex-end;
+}
+.sub-nav .sub-nav-item {
+  font-size: 2.4rem;
+  font-family: "Frank Ruhl Libre", serif;
+  color: #4b4b4b;
+  font-weight: 400;
+  cursor: pointer;
+}
+.sub-nav .sub-nav-item.choosen {
+  color: #F04639;
+  position: relative;
+}
+.sub-nav .sub-nav-item.choosen:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 20%;
+  bottom: 0px;
+  height: 1px;
+  display: block;
+  background-color: #F04639;
+}
+
+/******************************/
+/******PRODUCT******/
+/******************************/
+.products {
+  column-gap: 2.9rem;
+  row-gap: 4rem;
+}
+.products .product {
+  text-align: center;
+  position: relative;
+}
+.products .product img {
+  width: 100%;
+}
+.products .product-category {
+  margin-top: 1.1rem;
+  font-size: 1.4rem;
+  color: #707070;
+  margin-bottom: 0.7rem;
+}
+.products .product-rating {
+  margin-bottom: 1.2rem;
+}
+.products .product-rating img {
+  width: unset;
+}
+.products .product-title {
+  font-size: 1.6rem;
+  color: #4b4b4b;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.products .product-price-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.products .product-price {
+  color: #F04639;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.products .product-price-slash {
+  color: #9da2a5;
+  position: relative;
+}
+.products .product-price-slash:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: currentColor;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.products .product-tag {
+  width: 5.1rem;
+  height: 5.1rem;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  text-align: center;
+  line-height: 5.1rem;
+}
+.products .product-tag--sale {
+  color: #fff;
+  background-color: #E60023;
+}
+.products .product-tag--new {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #232323;
+}
+.products .product-img-box {
+  position: relative;
+  overflow: hidden;
+}
+.products .product-img-box:hover .product-hover-box {
+  bottom: 4rem;
+}
+.products .product-hover-box {
+  padding: 1.2rem;
+  height: 3.9rem;
+  width: 100%;
+  position: absolute;
+  bottom: -3rem;
+  transition: all 0.2s ease;
+}
+.products .product-hover-box .box-wrap {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.products .product-hover-box .box-wrap a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+}
+.products .product-hover-box .box-wrap .product-detail {
+  width: 5.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.products .product-hover-box .box-wrap .product-icon {
+  width: 1.6rem;
+  height: 1.1rem;
+  display: block;
+}
+
+/******************************/
+/******HELPER CLASSES******/
+/******************************/
+.none-box-shadow {
+  box-shadow: unset;
+}
+
+/*# sourceMappingURL=general.css.map */

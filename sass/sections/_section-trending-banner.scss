@@ -1,0 +1,45 @@
+.section-trending-banner{
+   width: 100%;
+   margin-top: 10rem;
+   .banner-wrap{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 513px;
+      gap: 3.9rem;
+      .banner-title{
+         font-size: 6.4rem;
+         font-weight: 500;
+      }
+      .trending-banner-left{
+         position: relative;
+         background-color: #fdeae6;
+         padding-left: 6.8rem;
+         padding-top: 8.3rem;
+         img{
+            position: absolute;
+            bottom: 0;
+            right: 1.8rem;
+         }
+         .banner-title{
+            margin-bottom: 3.5rem;
+         }
+         .banner-title{
+            display: block;
+            width: 70%;
+         }
+      }
+      .trending-banner-right{
+         background-image: url("../../assets/TrendingBanner/banner_right.png");
+         background-repeat: no-repeat;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         .banner-box{
+            margin-left: 6.8rem;
+            margin-top: 6.7rem;
+            .banner-title{
+               margin-bottom: 3.5rem;
+            }
+         }
+      }
+   }
+}

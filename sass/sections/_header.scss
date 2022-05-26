@@ -1,0 +1,48 @@
+.header {
+   height: 104px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   &-logo{
+      height: 32px;
+      flex: 0;
+   }
+   &-action{
+      display: flex;
+      align-items: center;
+      gap: 3.2rem;
+      &-container{
+      position: relative;
+      }
+      &-icon-number{
+         position: absolute;
+         font-size: 1.1rem;
+         color: #fff;
+         background-color: $primaryColor;
+         border-radius: 50%;
+         width: 2rem;
+         height: 2rem;
+         display: block;
+         text-align: center;
+         line-height: 2rem;
+         top: -50%;
+         right: -80%;
+         font-family: 'IBM Plex Sans', sans-serif;
+      }
+   }
+}
+
+.main-nav {
+   font-family: 'Gothic A1', sans-serif;
+   &-list{
+      list-style-type: none;
+      display: flex;
+      gap: 45px;
+   }
+   &-link{
+      text-decoration: none;
+      color: #232323;
+      font-size: 1.6rem;
+   }
+
+}

@@ -1,0 +1,17 @@
+
+.section-policy{
+   padding: 6.1rem 0;
+   justify-content: center;
+   .policy {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+   }
+   .policy-content {
+      color: $textColor;
+      p{
+         color: $subTextColor;
+      }
+   }
+}

@@ -1,0 +1,45 @@
+.section-sale-banner{
+   padding: 0 10.9rem;
+   .sale-banner-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      grid-template-rows: 549px;
+   }
+   
+   .banner {
+      position: relative;
+      padding: 8.3rem 4.6rem;
+      img{
+         position: absolute;
+      }
+   }
+
+   .banner--left{
+      background-color: #fff1ba;
+      img{
+         right: 4.6rem;
+         bottom: 0;
+         width: 553px;
+         
+      }
+      a {
+         margin-top: 5.9rem;
+      }
+   }
+
+   .banner--right{
+      background-color: #f1f2f3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      img{
+         bottom: 0;
+         right: 4.6rem;
+      }
+      .banner-right-content{
+         h1 {
+            margin-bottom: 5.7rem;
+         }
+      }
+   }
+}
