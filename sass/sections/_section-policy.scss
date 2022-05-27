@@ -7,6 +7,13 @@
       justify-content: center;
       align-items: center;
       gap: 2rem;
+      @include maxWidth(510px){
+         &-icon{
+            img{
+               width: 100%;
+            }
+         }
+      }
    }
    .policy-content {
       color: $textColor;
@@ -14,7 +21,7 @@
          color: $subTextColor;
       }
    }
-   @include minAndMaxWidth(740px, 1024px){
+   @include maxWidth(1200px){
       .policy-gap-m{
          column-gap: 1rem;
          row-gap: 2rem;

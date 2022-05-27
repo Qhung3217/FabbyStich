@@ -3,10 +3,12 @@
    margin-top: 10rem;
    .banner-wrap{
       display: grid;
-      grid-template-columns: 1fr 1fr;
       grid-template-rows: 513px;
       gap: 3.9rem;
-      
+      @include maxWidth(1024px){
+         grid-template-rows: 513px 513px;
+         grid-template-columns: 1fr;
+      }
       .banner-title{
          font-size: 6.4rem;
          font-weight: 500;
@@ -29,11 +31,19 @@
          background-color: #fdeae6;
          padding-left: 6.8rem;
          padding-top: 8.3rem;
+         @include maxWidth(510px){
+            padding-left: 1rem;
+            padding-top: 3rem;
+         }
          img{
             position: absolute;
             bottom: 0;
             right: 1.8rem;
             z-index: 0;
+
+            @include maxWidth(510px){
+               width: 100%;
+            }
          }
          .banner-title,.btn{
             z-index: 1;
@@ -55,11 +65,23 @@
          .banner-box{
             margin-left: 6.8rem;
             margin-top: 6.7rem;
+            @include maxWidth(510px){
+               margin-left: 1rem;
+               margin-top: 3rem;
+            }
             .banner-title{
                margin-bottom: 3.5rem;
             }
          }
          @include maxWidth(1200px){
+            background-position: center;
+         }
+         @include maxWidth(1024px){
+            background-position: unset;
+            width: 100%;
+            background-size: cover;
+         }
+         @include maxWidth(510px){
             background-position: center;
          }
       }

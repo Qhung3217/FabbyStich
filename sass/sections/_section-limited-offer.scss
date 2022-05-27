@@ -3,17 +3,25 @@
    margin-top: 10rem;
    position: relative;
    height: 1205px;
+   @include minAndMaxWidth(1201px,1580px){
+      height: 1000px;
+   }
    @include minAndMaxWidth(740px, 1024px){
       height: unset; 
       margin-bottom: 16.2rem;      
    }
+   @include maxWidth(710px) {
+      height:unset;
+      margin-bottom: 10rem;
+   }
    .limited-offer{
       grid-template-columns: 1.5fr 1fr;
       gap: 6.5rem;
+      max-width: 1590px;
       img{
-         max-width: 1590px;
+         width: 100%;
       }
-      @include maxWidth(1580px){
+      @include maxWidth(1300px){
          grid-template-columns: 1fr 1fr;
          img{
             width: 100%;
@@ -23,15 +31,31 @@
             gap: 1rem;
             align-items: center;
       }
+      @include maxWidth(740px){
+         grid-template-columns: 1fr;
+         position: relative;
+
+      }
       &-content{
-         max-width: 475px;
+         // max-width: 475px;
          padding-top: 3.4rem;
          @include maxWidth(1580px){
             width: 100%;
          }
          @include minAndMaxWidth(740px, 1024px){
             padding-top: 0;
-
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            height: 100%;
+            padding: 1rem;
+         }
+         @include maxWidth(740px){
+            position: absolute;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 3.4rem 1.2rem 0rem;
          }
          .limited-label{
             font-size: 2.4rem;
@@ -40,23 +64,38 @@
             color: #fff;
             display: inline-block;
             padding: 1.2rem 2.4rem;
-            @include minAndMaxWidth(740px, 1024px){
-               
+            @include maxWidth(510px){
+               padding: 0.4rem 0.8rem;
+               font-size: 2rem;
             }
          }
          .limited-title{
             margin-top: 4rem;
-            font-weight: 400;
+            font-weight: 500;
             color: #464646;
+            font-family: $secondaryFont;
             span{
-               font-size: 5.2rem;
+               font-size: 6.2rem;
                color: $primaryColor;
+               position: relative;
+               top: 1.2rem;
             }
             @include minAndMaxWidth(740px, 1024px){
                margin-top: 2rem;
                font-size: 3.2rem;
+               font-weight: 500;
+
                span{
                   font-size: 4.8rem;
+               }
+            }
+            @include maxWidth(510px){
+               margin-top: 2rem;
+               font-size: 1.6rem;
+               font-weight: 600;
+
+               span{
+                  font-size: 3.2rem;
                }
             }
          }
@@ -77,6 +116,13 @@
                   font-size: 1rem;
                }
             }
+            @include maxWidth(510px){
+               margin-top: 1rem;
+               font-size: 3.2rem;
+               span{
+                  font-size: 1rem;
+               }
+            }
          }
       }
    }
@@ -88,22 +134,32 @@
       background-color: #fff;
       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
       padding: 6.2rem 5.1rem;
-      @include maxWidth(1580px){
-         position: relative;
+      max-width: 90%;
+      @include minAndMaxWidth(1200px,1580px){
+         top: 37.5rem;
+         bottom: unset;
+      }
+      @include maxWidth(1200px){
+         position: unset;
          bottom: unset;
          right: unset;
+         max-width: unset;
       }
-      @include minAndMaxWidth(740px, 1024px){
+      @include maxWidth(1024px){
             padding: 3.6rem 1.8rem;
       }
       .pannel-nav{
          margin-right: 10rem;
+         @include maxWidth(510px){
+            margin-right: 1rem;
+            
+         }
       }
       .pannel-right-content{
          display: flex;
          align-items: center;
          gap: 5rem;
-         @include minAndMaxWidth(740px, 1024px){
+         @include maxWidth(1024px){
             gap: 1rem;  
          }
       }
@@ -125,7 +181,7 @@
                height: 7.4rem;
                font-size: 2.4rem;
             }
-            @include minAndMaxWidth(740px, 1024px){
+            @include maxWidth(1024px){
                width: 5.2rem;
                height: 5.2rem;
                font-size: 2.4rem;

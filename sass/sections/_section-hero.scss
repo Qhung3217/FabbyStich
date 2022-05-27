@@ -5,6 +5,9 @@
    position: relative;
    // height: 100vh;
    overflow: hidden;
+   @include maxWidth(740px){
+      margin-top: 72px;
+   }
    .slider-control{
       position: absolute;
       bottom: 6.5rem;
@@ -15,6 +18,11 @@
       cursor: pointer;
       @include maxWidth(1200px){
          right: 6rem;
+      }
+      @include maxWidth(510px){
+         right: 2rem;
+         gap: 0.8rem;
+         bottom: 4rem;
       }
       span{
          width: 9.4rem;
@@ -31,6 +39,11 @@
             height: 5.2rem;
             font-size: 2.4rem;
          }
+         @include maxWidth(510px){
+            width: 3.2rem;
+            height: 3.2rem;
+            font-size: 1.2rem;
+         }
       }
    }
    .social-logo{
@@ -45,6 +58,9 @@
       transform: translateY(-50%);
       @include maxWidth(1200px){
          right: 5rem;
+      }
+      @include maxWidth(510px){
+         right: 2rem;
       }
    }
    .ecllipse {
@@ -63,7 +79,7 @@
 .hero{  
    display: grid;
    grid-template-columns: 1fr 1.2fr;
-   @include minAndMaxWidth(740px, 1024px){
+   @include maxWidth(1024px){
       grid-template-columns: 1fr;
    }
    &-text-box{
@@ -72,11 +88,14 @@
       @include maxWidth(1200px){
          margin-top: 0.5rem;
       }
-      @include minAndMaxWidth(740px, 1024px){
-         z-index: 3;
-         position: absolute;
+
+      @include maxWidth(740px){
+         padding: 0 1rem;
+      }
+      @include maxWidth(510px){
          
       }
+      
       .slider-number{
          position:absolute;
          font-size: 1.6rem;
@@ -88,10 +107,29 @@
          align-items: flex-start;
          font-family: $secondaryFont;
          @include minAndMaxWidth(740px, 1024px){
-            bottom: -45%;
+            top: 545%;
             span{
                font-weight: 500;
             }
+         }
+         @include maxWidth(740px){
+            top: 360%;
+            left: unset;
+            span{
+               font-weight: 500;
+            }
+            background-color: rgba(255,255,255,0.3);
+         }
+         @include maxWidth(710px) {
+            top: 220%;
+            z-index: 4;
+            span{
+               text-shadow: 0 0 rgba(255,255,255,1);
+            }
+         }
+         @include maxWidth(510px){
+            top: 200%;
+            font-size: 1.2rem;
          }
          span{
             font-size: 3rem;
@@ -99,6 +137,16 @@
             margin-left: 4px;
             margin-right: 4px;
             font-weight: 400;
+            @include maxWidth(510px){
+               font-size: 2.4rem;
+            }
+         }
+      }
+      .m-hero-btn{
+         @include minAndMaxWidth(740px, 1024px){
+            position: absolute;
+            top: 160%;
+            z-index: 4;
          }
       }
    }
@@ -107,21 +155,23 @@
       font-size: 7.2rem;
       font-weight: 500;
       margin-bottom: 6px;
-      @include minAndMaxWidth(740px, 1024px){
-         text-shadow: 0 0 #fff;
-         width: 50%;
+      @include maxWidth(510px){
+         font-size: 4.4rem;
       }
    }
    &-description{
       color: $subTextColor;
       font-size: 2.4rem;
       margin-bottom: 7.5rem;
-      @include minAndMaxWidth(740px, 1024px){
-         // text-shadow: 0 0 #fff;
-         width: 50%;
-         font-weight: 500;
+      @include maxWidth(1024px){
+         margin-bottom: 0;
+      }
+      @include maxWidth(510px){
+         margin-bottom: 3rem;
+         font-size: 2rem;
       }
    }
+
    &-img-box{
       position: relative;
       .hero-img{
@@ -130,7 +180,7 @@
          position: relative;
          width: 100%;
          @include minAndMaxWidth(740px, 1024px){
-           
+         
          }
       }
       .circle{

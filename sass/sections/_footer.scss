@@ -1,3 +1,4 @@
+@import "../variables&mixin/mixin";
 .footer{
    background-color: #edf0f5;
    margin-top: 12.9rem;
@@ -37,11 +38,21 @@
       padding: 8rem 0 10rem;
       color: #4b4b4b;
       font-size: 1.6rem;
+      @include maxWidth(1024px){
+         grid-template-columns: repeat(3,1fr);
+         row-gap: 3rem;
+         padding-left: 2rem;
+         padding-right: 2rem;
+      }
+      
       .title{
             font-weight: 400;
             margin-bottom: 2.2rem;
       }
       .intro{
+         @include maxWidth(1024px){
+            grid-column: 1 / -1;
+         }
          .desc{
             margin-top: 2.6rem;
             font-family: $secondaryFont;

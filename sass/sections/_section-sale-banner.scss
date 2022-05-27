@@ -1,7 +1,7 @@
 @import "../variables&mixin/mixin";
 .section-sale-banner{
    padding: 0 10.9rem;
-   @include minAndMaxWidth(740px, 1024px){
+   @include maxWidth(1024px){
       padding: 0 2rem;
    }
    .sale-banner-container {
@@ -9,9 +9,13 @@
       display: grid;
       grid-template-columns: 1.4fr 1fr;
       grid-template-rows: 549px;
-      @include minAndMaxWidth(740px, 1024px){
+      @include maxWidth(1024px){
          grid-template-columns: 1fr;
-         row-gap: 14rem;
+         grid-template-rows: 549px 549px;
+         row-gap: 1rem;
+      }
+      @include maxWidth(510px){
+         grid-template-rows: 280px 500px;
       }
    }
    
@@ -21,15 +25,31 @@
       img{
          position: absolute;
          z-index: 0;
-         @include minAndMaxWidth(740px, 1024px){
-            
-         }
+         
       }
       .heading-1, .btn{
          z-index: 1;
          position: relative;
          text-shadow: 0 0 rgb(255,255,255);
+         @include maxWidth(510px){
+            letter-spacing: -1.1px;
+         }
       }
+      @include maxWidth(740px){
+         padding: 5.2rem 2.4rem;
+      }
+      @include maxWidth(510px){
+         padding: 3.2rem 2.4rem;
+         width: 100%;
+         img {
+            width: 100% !important;
+         }
+         a{
+            margin-top: 1rem !important;
+            padding: 0.8rem 1.6rem;
+         }
+      }
+      
    }
 
    .banner--left{
@@ -38,7 +58,12 @@
          right: 4.6rem;
          bottom: 0;
          width: 553px;
-         
+         @include maxWidth(740px){
+            right: 2.4rem;
+         }
+         @include maxWidth(510px){
+            right: 0;
+         }
       }
       a {
          margin-top: 5.9rem;
@@ -49,13 +74,22 @@
       background-color: #f1f2f3;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      @include maxWidth(510px){
+         grid-template-columns: 1fr;
+      }
       img{
          bottom: 0;
          right: 4.6rem;
+         @include maxWidth(510px){
+            right: 0;
+         }
       }
       .banner-right-content{
          h1 {
             margin-bottom: 5.7rem;
+            @include maxWidth(510px){
+               margin-bottom: 1rem;
+            }
          }
       }
    }

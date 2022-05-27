@@ -3,7 +3,7 @@
    margin-top: 31rem;
    padding: 0 2.3rem;
    @include minAndMaxWidth(740px, 1024px){
-      margin-top: 47rem;        
+      margin-top: 35rem;        
    }
    .images{
       gap: 2.3rem;
@@ -14,15 +14,23 @@
          width: 100%;
       }
    }
-   @include minAndMaxWidth(740px, 1024px){
+   @include maxWidth(1024px){
       .images-m{
          display: flex;
          justify-content: center;
          align-items: center;
          flex-wrap: wrap;
          .image-m{
-            width: 33.333%;
+            width: calc(33.333% - 2rem);
          }
       }        
+   }
+   @include maxWidth(710px){
+      .images-m{
+         
+         .image-m{
+            width: calc(50% - 2rem);
+         }
+      }   
    }
 }

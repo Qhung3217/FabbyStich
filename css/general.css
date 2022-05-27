@@ -58,6 +58,15 @@ html {
   font-size: 1.8rem;
 }
 
+@media screen and (max-width: 510px) {
+  .heading-1 {
+    font-size: 3.6rem;
+  }
+
+  .heading-4 {
+    font-size: 2rem;
+  }
+}
 .btn {
   text-decoration: none;
   background: none;
@@ -160,6 +169,47 @@ html {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+@media screen and (max-width: 740px) {
+  .container {
+    width: 100%;
+    max-width: unset;
+    padding: 0 1rem;
+    margin: 0;
+  }
+
+  .grid-s-1-col {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-s-2-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-s-3-col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-s-4-col {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 510px) {
+  .grid-tiny-1-col {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-tiny-2-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-tiny-3-col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-tiny-4-col {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .list {
   list-style: none;
 }
@@ -182,6 +232,12 @@ html {
   align-items: center;
   list-style-type: none;
   gap: 2.5rem;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 510px) {
+  .sub-nav .sub-nav-list {
+    gap: 1.2rem;
+  }
 }
 .sub-nav .sub-nav-list--center {
   justify-content: center;
@@ -195,6 +251,11 @@ html {
   color: #4b4b4b;
   font-weight: 400;
   cursor: pointer;
+}
+@media screen and (max-width: 510px) {
+  .sub-nav .sub-nav-item {
+    font-size: 1.4rem;
+  }
 }
 .sub-nav .sub-nav-item.choosen {
   color: #F04639;
@@ -221,6 +282,12 @@ html {
 @media screen and (max-width: 1200px) {
   .products {
     column-gap: 2rem;
+  }
+}
+@media screen and (max-width: 740px) {
+  .products {
+    column-gap: 1rem;
+    row-gap: 2rem;
   }
 }
 .products .product {
@@ -361,6 +428,12 @@ html {
 /******************************/
 .none-box-shadow {
   box-shadow: unset;
+}
+
+@media screen and (max-width: 740px) {
+  .mobile-display-none {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=general.css.map */
