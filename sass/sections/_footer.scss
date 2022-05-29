@@ -44,6 +44,9 @@
          padding-left: 2rem;
          padding-right: 2rem;
       }
+      @include maxWidth(510px){
+         grid-template-columns: repeat(2,1fr);
+      }
       
       .title{
             font-weight: 400;

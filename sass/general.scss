@@ -406,5 +406,10 @@ html {
       display: none;
    }
 }
+@include maxWidth(510px){
+   .tiny-display-none{
+      display: none;
+   }
+}
 
 

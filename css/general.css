@@ -435,5 +435,10 @@ html {
     display: none;
   }
 }
+@media screen and (max-width: 510px) {
+  .tiny-display-none {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=general.css.map */

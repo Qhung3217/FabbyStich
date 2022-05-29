@@ -15,7 +15,7 @@
          row-gap: 1rem;
       }
       @include maxWidth(510px){
-         grid-template-rows: 280px 500px;
+         grid-template-rows: 320px 700px;
       }
    }
    
