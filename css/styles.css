@@ -631,7 +631,7 @@
   width: 70%;
 }
 .section-trending-banner .banner-wrap .trending-banner-right {
-  background-image: url("../../assets/TrendingBanner/banner_right.png");
+  background-image: url("../assets/TrendingBanner/banner_right.png");
   background-repeat: no-repeat;
   display: grid;
   grid-template-columns: 1fr 1fr;
